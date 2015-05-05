@@ -1,5 +1,5 @@
-# HTML5-minimal-template
-Custom made minimal boilerplate, including html, css, js. 
+# HTML5 minimal template
+Custom made boilerplate, including html, css, js. 
 
 Just copy and start coding! 
 
