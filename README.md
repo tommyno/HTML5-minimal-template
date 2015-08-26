@@ -1,6 +1,15 @@
 # HTML5 minimal template
-Custom made boilerplate, including html, css, js. 
 
-Just copy and start coding! 
+Custom made boilerplate.
 
-Made at www.plastikk.no.
+Includes:
+Grid (from gridpack.com)
+Lazysizes
+Picturefill
+Fastclick
+jQuery
+CSS reset + code snippets
+Html examples
+Open graph tags
+Shims for < IE9 + browser happy message
+.htaccess tools

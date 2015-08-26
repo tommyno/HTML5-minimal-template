@@ -1,15 +1,15 @@
 <!doctype html>
-<!--[if lt IE 9]><html lang="nb-NO" class="oldbrowser"><![endif]-->
-<!--[if IE 9]><html lang="nb-NO" class="ie9"><![endif]-->
-<!--[if gt IE 9]><!--><html lang="nb-NO"> <!--<![endif]-->
+<html lang="no">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="Page description">
-
     <title>Webpage</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/picturefill.min.js" async></script>
+    <script src="js/lazysizes.min.js" async></script>
     
     <!-- Open Graph data -->
     <meta property="og:title" content="Title Here">
@@ -19,19 +19,18 @@
     <meta property="og:description" content="Description Here">
 
     <!--[if lt IE 9]>
-        <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
-        <script src="//ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+      <script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
+      <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
 </head>
 
 <body>
 
-    <header>
-        <h1>Ready to go!</h1>
-    </header>
+    <h1>Ready to go!</h1>
 
+
+    <!-- Gridpak example 
     <div class="outerwrap">
         <div class="row">
             <div class="col col-1-3">Content</div>
@@ -39,24 +38,36 @@
             <div class="col col-1-3">Content</div>
         </div>
     </div>
-
-    <footer>
-        <p>Disclaimer + copyright</p>
-    </footer>
+    -->
 
 
+    <!-- Lazy load image example 
+    <img data-src="http://lorempixel.com/800/600/" class="lazyload">
+    <img data-src="http://lorempixel.com/500/300/" class="lazyload">
+    -->
+    
+
+    <!-- Responsive images 
+        (remove "sizes" if all images ~ 100% of viewport width)
+    <img
+        alt="Example image"
+        sizes="(min-width: 960px) 50vw, 100vw"
+        srcset="http://placehold.it/350x200 350w,
+                http://placehold.it/900x300 900w,
+                http://placehold.it/1400x600 1400w" />
+    -->
 
 
     <!-- Show message on old browsers (IE8 and less) -->
     <!--[if lt IE 9]>
-        <div class="browsehappy"><p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p></div>
-    <![endif]-->      
+        <div class="browsehappy"><p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to view this webpage correctly.</p></div>
+    <![endif]-->    
+      
 
     <!-- Scripts -->    
+    <script src="js/fastclick.min.js" async></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
 
 </body>
 </html>
-
-<!-- Digitally Crafted by Plastikk // 2015 // www.plastikk.no !-->

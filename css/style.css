@@ -1,12 +1,9 @@
-/* DIGITALLY CRAFTED BY PLASTIKK // 2015 // www.plastikk.no */
-
-
 /************************ 
     RESET AND DEFAULTS
 ************************/
 
 /* reset */
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:top;background:transparent}
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:top;background:transparent;}
 
 /* clearfix */
 .clearfix:after {content: ""; display: table; clear: both;}
@@ -16,10 +13,11 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 
 /* default styles */
 a {color: inherit; text-decoration: none;} /* inherit color, no underline*/
-p a {text-decoration: underline;}
+p a {text-decoration: underline;} /* underline links in paragraphs */
 ul {list-style-position: inside;}  /* start lists inside container */
 img {max-width: 100%; height: auto;} /* responsive images */
-
+.map img {max-width: none;} /* fix: responsive img breaks google maps */
+img[data-sizes="auto"] { display: block; width: 100%; } /* needed for picturefill + lazysizes */
 
 
 /************************ 
@@ -43,13 +41,15 @@ body {
     font-family: arial, sans-serif;
     color: #323436;
     position: relative;
+    line-height: 1;
 }
 
 p {
+    font-size: 16px;
     line-height: 1.45;
 }
 
-h1, h2, h3, h4 {}
+h1, h2, h3, h4 {font-weight: normal;}
 
 
 /************************ 
@@ -73,8 +73,7 @@ h1, h2, h3, h4 {}
 .col {
     border: 0px solid rgba(0,0,0,0);
     display: inline-block;
-    box-sizing:border-box;
-    background-clip:padding-box !important;
+    background-clip: padding-box !important;
     vertical-align: top;
     border-left-width: 40px; 
     padding: 0; 
@@ -97,17 +96,17 @@ h1, h2, h3, h4 {}
 .col-3-5 {width: 60%;}
 .col-4-5 {width: 80%;}
 
-/* 
-    Example:
-    <div class="outerwrap">
-        <h1>Heading</h1>
-        <div class="row">
-            <div class="col col-1-3">Content</div>
-            <div class="col col-1-3">Content</div>
-            <div class="col col-1-3">Content</div>
+    /* 
+        Example:
+        <div class="outerwrap">
+            <h1>Heading</h1>
+            <div class="row">
+                <div class="col col-1-3">Content</div>
+                <div class="col col-1-3">Content</div>
+                <div class="col col-1-3">Content</div>
+            </div>
         </div>
-    </div>
-*/
+    */
 
 
 
@@ -132,35 +131,24 @@ h1, h2, h3, h4 {}
     (delete if not used)
 ************************/
 
-/* vertical + horizontal center */
-.fullscreen {
-    display: table;
-    height: 100%;
-    min-height: 100%;
-    width: 100%;
-}
-.fullscreen .content {
-    display: table-cell;
-    vertical-align: middle;
-}
-.fullscreen .content .center {
-    margin: 0 auto;
-    position: relative;
-    text-align: center;
-}
-
 /* full screen background */
 .bgfill {
     background-image: url(img/background.jpg);
     background-position: center top;
     background-repeat: no-repeat; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
+/* Image replacement */
+/* http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ */
+.visually-hidden {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .hidden {display: none;}
+
 
 /* animate */
 .anim {
@@ -179,12 +167,33 @@ h1, h2, h3, h4 {}
 
 /* Show message for IE 8 and less*/
 .browsehappy {
-    position: absolute;
-    top: 0; left: 0; right: 0; 
-    height: 30px;
+    position: fixed;
+    bottom: 0; left: 0; right: 0; 
+    padding: 15px;
     margin: 0 auto;
     color: black;
     background: gold;
     text-align: center;
 }
 .oldbrowser {padding-top: 30px;}
+
+
+/* Responsive videos */
+.videowrap {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 aspect (9/16 = 56,25%) */
+    height: 0;
+    overflow: hidden;        
+}
+
+    .videowrap iframe,  
+    .videowrap object,  
+    .videowrap embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }  
+
+
