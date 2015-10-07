@@ -126,12 +126,13 @@ h1, h2, h3, h4 {font-weight: normal;}
 
 
 
+
 /************************ 
     CODE SNIPPETS 
     (delete if not used)
 ************************/
 
-/* full screen background */
+/* Full screen background */
 .bgfill {
     background-image: url(img/background.jpg);
     background-position: center top;
@@ -150,7 +151,7 @@ h1, h2, h3, h4 {font-weight: normal;}
 .hidden {display: none;}
 
 
-/* animate */
+/* Transitions */
 .anim {
 -webkit-transition:all 200ms ease-in-out;
    -moz-transition:all 200ms ease-in-out;
@@ -195,5 +196,3 @@ h1, h2, h3, h4 {font-weight: normal;}
         width: 100%;
         height: 100%;
     }  
-
-
