@@ -1,10 +1,10 @@
-"use strict";
-
-
 // Vanilla JS
-(function() {
+;(function() {
 
+	"use strict";
+	
 	// do something
+	console.log("Hello, is it me you are looking for?");
 
 })();
 
@@ -13,7 +13,6 @@
 $(document).ready(function() {
 
 	// do something
-	console.log("Hello, is it me you are looking for?");
 
 }); 
 
